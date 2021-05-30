@@ -1,0 +1,13 @@
+{{template "loggedInHeader"}}
+    <div class="products">
+        {{range .}}
+            <div class="card">
+                <h1>{{.Product_name}}</h1>
+                <img src="/resources/{{.Image_path}}.jfif">
+                <p class="price">{{.Product_price}}</p>
+                <p>{{.Product_description}}</p>
+                <p><button>Add To Cart</button></p>
+            </div>
+        {{end}}
+    </div>
+{{template "footer"}}

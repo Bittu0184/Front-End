@@ -1,0 +1,58 @@
+{{define "newheader"}}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="/resources/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="/resources/logo.png" class="logo">Go Craft</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#search" onclick="showSearchBar()" class="nav-link btn btn-light"  data-toggle="collapse" data-target="#searchbar" ><i class="fa fa-search" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/signup" class="nav-link btn btn-light"><i class="far fa-user-circle"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/login" class="nav-link btn btn-light">Log In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script type='text/javascript'>
+        function showSearchBar(){
+            document.getElementById("searchbar").style.display = "block";
+        }
+        function hideSearchBar(){
+            document.getElementById("searchbar").style.display = "none";
+        }
+    </script>
+    <div class="search-form-wrapper mx-auto collapse" id="searchbar">
+        <form class="form-inline" action="GET">
+            <div class="form-group search-bar-group">
+                <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+                <input type="text" name="search" class="form-control search-bar-custom" placeholder="Search...">
+                <span class="btn btn-light" onclick="hideSearchBar()" id="basic-addon2"><i class="fa fa-window-close" aria-hidden="true"></i>
+                </span>
+            </div>
+        </form>
+    </div>
+    </div>
+{{end}}
